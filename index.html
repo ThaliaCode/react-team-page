@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practica-react1</title>
+  </head>
+  <body>
+    <div class="" id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+              <!-- App.jsx:
+          Es el componente principal de la aplicación.
+
+          components/:
+          Carpeta donde van los componentes reutilizables.
+
+          data/:
+          Carpeta donde puedo guardar arrays u objetos con información.
+
+          MemberCard.jsx:
+          Componente que representa una card de un miembro del equipo.
+
+          team.js:
+          Archivo donde guardaré el array de miembros del equipo.
+
+          Props:
+          Sirven para pasar datos desde App.jsx hacia MemberCard.jsx.
+
+          map:
+          Sirve para recorrer el array team y crear una card por cada persona.
+
+          key:
+          Se usa cuando renderizamos listas con map para que React identifique cada elemento. -->
+          <!-- ----------------------------------------------------- -->
+           <!-- Un componente es una función que retorna JSX. -->
+
+        <!-- JSX es HTML dentro de JavaScript.
+
+        App.jsx es el componente principal.
+
+        Puedo crear toda la página en App.jsx, pero no es buena práctica si el proyecto crece.
+
+        Separamos componentes para mantener el código ordenado y reutilizable.
+
+        MemberCard.jsx sirve para crear una card.
+
+        App.jsx sirve para mostrar esa card.
+
+        export permite sacar un componente de su archivo.
+
+        import permite traer un componente desde otro archivo. -->
+
+        <!-- --------------------------------- -->
+         <!-- En React, cuando tengo muchos datos parecidos, uso un array. -->
+
+        <!-- Cuando quiero mostrar varios elementos en pantalla, uso map.
+
+        Cuando quiero reutilizar diseño, creo un componente.
+
+        Cuando quiero enviar datos a ese componente, uso props. -->
+        <!-- ----------------------- -->
+         <!-- Si una parte se usa una sola vez, puede ir en App.jsx. -->
+
+        <!-- Si una parte se repite varias veces, conviene convertirla en componente.
+
+        App.jsx organiza la página.
+
+        MemberCard.jsx dibuja una sola tarjeta reutilizable. -->
+
+        <!-- -------------------------- -->
+          <!-- 
+                  index es la posición de cada elemento cuando usamos map.
+
+          index 0 = primer elemento
+          index 1 = segundo elemento
+          index 2 = tercer elemento
+
+          Puedo usar index para aplicar estilos diferentes a algunas cards.
+
+          index % 2 !== 0 sirve para detectar posiciones impares. -->
+          <!-- -------------------------------------------------- -->
+                    <!-- Si uso index dentro de MemberCard, debo enviarlo desde App.jsx.
+
+          App.jsx:
+          <MemberCard persona={persona} index={index} />
+
+          MemberCard.jsx:
+          function MemberCard({ persona, index }) { ... } -->
+<!-- 
+          MemberCard estaba esperando index,
+          pero App.jsx no se lo estaba pasando.
+  </body> -->
+
+  <!-- ------------------------------------------------------------- -->
+   <!-- relative se pone en el padre.
+
+absolute se pone en el hijo que quiero mover.
+
+top-0 lo manda arriba.
+
+right-0 lo manda a la derecha.
+
+translate-x-full lo empuja hacia afuera del borde derecho.
+
+[writing-mode:vertical-rl] pone el texto en vertical. -->
+<!-- top-0
+right-[-18px]
+arriba de la card
+un poquito fuera del borde derecho -->
+<!-- Para ubicar algo en la esquina superior:
+padre: relative
+hijo: absolute top-0 right-0
+
+Si quiero sacarlo un poco hacia afuera:
+right-[-18px] -->
+</html>

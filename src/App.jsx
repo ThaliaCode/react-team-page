@@ -7,7 +7,7 @@ function App() {
     <>
     <main className="flex flex-col justify-center items-center bg-[#ffffff] min-h-screen">
     <header className="md:flex md:justify-between md:items-start md:gap-75">
-      <h1 className="font-bold text-2xl mt-9 md:text-5xl  ">The creative crew  </h1>
+      <h1 className="font-bold text-2xl mt-9 md:text-5xl  m-6">The creative crew  </h1>
     
     <section className="m-9 md:w-90 ">
       <h2 className="font-bold text-xl md:text-3xl ">Who we are</h2>
